@@ -1,11 +1,12 @@
+import uvicorn
 from fastapi import FastAPI
 import joblib
 import numpy as np
 
-# Load your trained model (make sure best_model.pkl is in the same folder)
+# Load trained model
 model = joblib.load("best_model.pkl")
 
-# Create FastAPI app
+# Initialize FastAPI app
 app = FastAPI()
 
 @app.get("/")
@@ -20,3 +21,7 @@ def predict(features: list):
         return {"prediction": int(prediction[0])}
     except Exception as e:
         return {"error": str(e)}
+
+# Ensure the app runs when executed
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
