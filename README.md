@@ -162,3 +162,9 @@ jobs:
 This project demonstrates how to **train, deploy, and automate an ML model using FastAPI, Docker, and Railway**.
 With **MLflow integration, automatic deployment, and CI/CD**, the workflow is **fully scalable & production-ready!** 🚀
 
+
+
+## 📝 License
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
+
+
