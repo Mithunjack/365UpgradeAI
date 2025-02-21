@@ -1,4 +1,4 @@
-# 🚀 Machine Learning API - FastAPI + Docker + Railway Deployment
+# 🚀 Machine Learning API
 
 ## 📖 Overview
 This project is a **Machine Learning API** built using **FastAPI**, designed to predict whether students will upgrade to a paid plan based on their platform engagement metrics.
