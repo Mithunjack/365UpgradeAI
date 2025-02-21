@@ -16,10 +16,9 @@ The API is **containerized with Docker** and **deployed on Railway** using **Git
 ## 📂 Project Structure
 ```
 ├── .github/workflows/  # GitHub Actions Workflow
-├── app/
-│   ├── main.py         # FastAPI application
-│   ├── best_model.pkl  # Trained ML model
-│   ├── requirements.txt # Dependencies
+├── main.py         # FastAPI application
+├── best_model.pkl  # Trained ML model
+├── requirements.txt # Dependencies
 ├── Dockerfile          # Docker Configuration
 ├── README.md           # Documentation
 ```
