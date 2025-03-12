@@ -1,5 +1,7 @@
 # 🚀 Predict student purchase behavior 🚀
 
+<img src="https://github.com/user-attachments/assets/9919ebba-52c2-4353-aa0d-ed893cbd8381" width="350" />
+
 ## 📖 Overview
 This project is a **Machine Learning API** built using **FastAPI**, designed to predict whether students will upgrade to a paid plan based on their platform engagement metrics.
 
