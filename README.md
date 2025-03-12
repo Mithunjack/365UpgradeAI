@@ -1,4 +1,4 @@
-# 🚀 Predict student purchase behavior 🚀
+# 🚀 365UpgradeAI - Predict student purchase behavior 🚀
 
 <img src="https://github.com/user-attachments/assets/9919ebba-52c2-4353-aa0d-ed893cbd8381" width="350" />
 
