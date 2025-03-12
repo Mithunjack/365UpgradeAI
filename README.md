@@ -154,7 +154,7 @@ jobs:
 ```
 
 ## 📌 Future Improvements
-🔹 Use **PostgreSQL** to store predictions  
+🔹 Frontend UI with Vue 
 🔹 Add **JWT authentication** for secure access  
 🔹 Deploy MLflow on Railway for better model management  
 
