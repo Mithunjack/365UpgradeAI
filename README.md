@@ -1,9 +1,9 @@
-# 🚀 Machine Learning API
+# 🚀 Predict student purchase behavior 🚀
 
 ## 📖 Overview
 This project is a **Machine Learning API** built using **FastAPI**, designed to predict whether students will upgrade to a paid plan based on their platform engagement metrics.
 
-The API is **containerized with Docker** and **deployed on Railway** using **GitHub Actions** for CI/CD automation.
+The API is **containerized with Docker** and **deployed on Railway** using **GitHub Actions** for CI/CD automation. Additionally, a **Vue.js frontend** has been implemented for seamless interaction with the API.
 
 ## 🎯 Features
 ✅ **FastAPI for Serving ML Predictions**  
@@ -12,6 +12,7 @@ The API is **containerized with Docker** and **deployed on Railway** using **Git
 ✅ **Dockerized & Deployed on Railway**  
 ✅ **Automatic Deployment via GitHub Actions**  
 ✅ **Swagger UI for API Testing (`/docs`)**  
+✅ **Vue.js Frontend for User Interaction**
 
 ## 📂 Project Structure
 ```
@@ -19,7 +20,12 @@ The API is **containerized with Docker** and **deployed on Railway** using **Git
 ├── main.py         # FastAPI application
 ├── best_model.pkl  # Trained ML model
 ├── requirements.txt # Dependencies
-├── Dockerfile          # Docker Configuration
+├── Dockerfile      # Docker Configuration
+├── ml-ui/
+│   ├── src/components/PredictionForm.vue  # Vue.js component
+│   ├── src/App.vue     # Vue.js main application
+│   ├── package.json    # Frontend dependencies
+│   ├── netlify.toml    # Netlify Deployment Config
 ├── README.md           # Documentation
 ```
 
@@ -32,12 +38,12 @@ cd your-repo-name
 
 ### **2️⃣ Install Dependencies**
 ```bash
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 ```
 
 ### **3️⃣ Run FastAPI Locally**
 ```bash
-uvicorn main:app --host 0.0.0.0 --port 8000
+uvicorn backend.main:app --host 0.0.0.0 --port 8000
 ```
 Now, open **Swagger UI** to test the API:  
 👉 `http://127.0.0.1:8000/docs`
@@ -45,7 +51,7 @@ Now, open **Swagger UI** to test the API:
 ## 🐳 Docker Deployment
 ### **1️⃣ Build the Docker Image**
 ```bash
-docker build -t ml-fastapi .
+docker build -t ml-fastapi backend/.
 ```
 
 ### **2️⃣ Run the Container**
@@ -145,7 +151,7 @@ jobs:
 
     - name: Build & Push Docker Image
       run: |
-        docker build -t YOUR_DOCKER_USERNAME/ml-fastapi:latest .
+        docker build -t YOUR_DOCKER_USERNAME/ml-fastapi:latest backend/.
         docker push YOUR_DOCKER_USERNAME/ml-fastapi:latest
 
     - name: Deploy to Railway
@@ -153,8 +159,20 @@ jobs:
         railway redeploy YOUR_SERVICE_ID
 ```
 
+## 🚀 Frontend Deployment (Vue.js)
+The frontend is built with Vue.js and deployed on **Netlify**.
+
+### **🔹 Deploy Vue.js on Netlify**
+```bash
+npm install -g netlify-cli
+npm run build
+netlify deploy --prod
+```
+### **🔹 Public Frontend URL**
+👉 `https://frolicking-florentine-149b05.netlify.app/`
+
 ## 📌 Future Improvements
-🔹 Frontend UI with Vue 
+🔹 Enhance Vue UI for better user experience  
 🔹 Add **JWT authentication** for secure access  
 🔹 Deploy MLflow on Railway for better model management  
 
@@ -163,8 +181,6 @@ This project demonstrates how to **train, deploy, and automate an ML model using
 With **MLflow integration, automatic deployment, and CI/CD**, the workflow is **fully scalable & production-ready!** 🚀
 
 
-
 ## 📝 License
 This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
-
 
