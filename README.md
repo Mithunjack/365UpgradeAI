@@ -173,11 +173,6 @@ netlify deploy --prod
 ### **🔹 Public Frontend URL**
 👉 `https://frolicking-florentine-149b05.netlify.app/`
 
-## 📌 Future Improvements
-🔹 Enhance Vue UI for better user experience  
-🔹 Add **JWT authentication** for secure access  
-🔹 Deploy MLflow on Railway for better model management  
-
 ## 💡 Conclusion
 This project demonstrates how to **train, deploy, and automate an ML model using FastAPI, Docker, and Railway**.
 With **MLflow integration, automatic deployment, and CI/CD**, the workflow is **fully scalable & production-ready!** 🚀
